@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="auth-container">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="login">Login</button>
+        <button class="tab-btn" data-tab="register">Register</button>
+      </div>
+
+      <form id="login-form" class="auth-form active">
+        <h2>Login</h2>
+        <div class="form-group">
+          <input type="email" id="login-email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="login-code" placeholder="Verification Code" required>
+        </div>
+        <button type="button" id="send-login-code" class="btn btn-secondary">Send Code</button>
+        <button type="submit" class="btn">Login</button>
+        <div id="login-message" class="message"></div>
+      </form>
+
+      <form id="register-form" class="auth-form">
+        <h2>Register</h2>
+        <div class="form-group">
+          <input type="text" id="register-name" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="register-email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="register-code" placeholder="Verification Code" required>
+        </div>
+        <button type="button" id="send-register-code" class="btn btn-secondary">Send Code</button>
+        <button type="submit" class="btn">Register</button>
+        <div id="register-message" class="message"></div>
+      </form>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h2>Welcome, <span id="user-name"></span>!</h2>
+      <p>You are logged in.</p>
+      <button id="logout-btn" class="btn">Logout</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
