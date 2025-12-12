@@ -1,0 +1,13 @@
+name = "auth-email-worker"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "AUTH_CODES"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# Setup instructions:
+# 1. Create KV namespace: wrangler kv:namespace create "AUTH_CODES"
+# 2. Copy the id from output and replace YOUR_KV_NAMESPACE_ID above
+# 3. Add Resend API key: wrangler secret put RESEND_API_KEY
+# 4. Deploy: wrangler deploy
